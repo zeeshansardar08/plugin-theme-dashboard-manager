@@ -1,0 +1,23 @@
+<?php
+/**
+ * Uninstall Plugin & Theme Dashboard Manager
+ *
+ * @package PluginThemeDashboardManager
+ * @since 1.0.0
+ */
+
+// If uninstall not called from WordPress, exit
+if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
+    exit;
+}
+
+// Check if user has proper permissions
+if ( ! current_user_can( 'activate_plugins' ) ) {
+    return;
+}
+
+// Delete plugin options
+delete_option( 'ptdm_activated' );
+
+// Clear any cached data that has been removed
+wp_cache_flush(); 
