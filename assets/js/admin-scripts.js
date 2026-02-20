@@ -118,9 +118,9 @@
                 var tooltip = '';
                 
                 if (status === 'active') {
-                    tooltip = 'This item is currently active and running';
+                    tooltip = ptdm_ajax.strings.tooltip_active;
                 } else if (status === 'inactive') {
-                    tooltip = 'This item is installed but not currently active';
+                    tooltip = ptdm_ajax.strings.tooltip_inactive;
                 }
                 
                 if (tooltip) {
@@ -189,7 +189,7 @@
          * Search functionality
          */
         initSearch: function() {
-            var $searchInput = $('<input type="text" class="ptdm-search" placeholder="Search plugins and themes..." />');
+            var $searchInput = $('<input type="text" class="ptdm-search" placeholder="' + ptdm_ajax.strings.search_placeholder + '" />');
             $('.ptdm-export-section').after($searchInput);
             
             var debouncedSearch = this.debounce(function() {

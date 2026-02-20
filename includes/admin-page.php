@@ -78,6 +78,9 @@ class PTDM_Admin_Page {
                 'strings'  => array(
                     'exporting' => __( 'Exporting...', 'plugin-theme-dashboard-manager' ),
                     'error'     => __( 'An error occurred. Please try again.', 'plugin-theme-dashboard-manager' ),
+                    'search_placeholder' => __( 'Search plugins and themes...', 'plugin-theme-dashboard-manager' ),
+                    'tooltip_active'     => __( 'This item is currently active and running.', 'plugin-theme-dashboard-manager' ),
+                    'tooltip_inactive'   => __( 'This item is installed but not currently active.', 'plugin-theme-dashboard-manager' ),
                 ),
             )
         );
@@ -117,12 +120,12 @@ class PTDM_Admin_Page {
             </div>
 
             <nav class="nav-tab-wrapper">
-                <a href="?page=plugin-theme-dashboard&tab=plugins" 
+                <a href="<?php echo esc_url( admin_url( 'tools.php?page=plugin-theme-dashboard&tab=plugins' ) ); ?>" 
                    class="nav-tab <?php echo 'plugins' === $current_tab ? 'nav-tab-active' : ''; ?>">
                     <?php esc_html_e( 'Plugins', 'plugin-theme-dashboard-manager' ); ?>
                     <span class="ptdm-count">(<?php echo esc_html( count( $this->get_plugins_data() ) ); ?>)</span>
                 </a>
-                <a href="?page=plugin-theme-dashboard&tab=themes" 
+                <a href="<?php echo esc_url( admin_url( 'tools.php?page=plugin-theme-dashboard&tab=themes' ) ); ?>" 
                    class="nav-tab <?php echo 'themes' === $current_tab ? 'nav-tab-active' : ''; ?>">
                     <?php esc_html_e( 'Themes', 'plugin-theme-dashboard-manager' ); ?>
                     <span class="ptdm-count">(<?php echo esc_html( count( $this->get_themes_data() ) ); ?>)</span>
@@ -264,7 +267,13 @@ class PTDM_Admin_Page {
             return strcasecmp( $a['name'], $b['name'] );
         } );
 
-        return $plugins_data;
+        /**
+         * Filter plugins data before display.
+         *
+         * @since 1.0.0
+         * @param array $plugins_data Array of plugins data.
+         */
+        return apply_filters( 'ptdm_plugins_data', $plugins_data );
     }
 
     /**
@@ -293,6 +302,12 @@ class PTDM_Admin_Page {
             return strcasecmp( $a['name'], $b['name'] );
         } );
 
-        return $themes_data;
+        /**
+         * Filter themes data before display.
+         *
+         * @since 1.0.0
+         * @param array $themes_data Array of themes data.
+         */
+        return apply_filters( 'ptdm_themes_data', $themes_data );
     }
-} 
+}

@@ -114,6 +114,16 @@ class PTDM_CSV_Export {
             );
         }
 
+        /**
+         * Filter CSV export data.
+         *
+         * @since 1.0.0
+         * @param array $csv_data     CSV rows.
+         * @param array $plugins_data Plugins data.
+         * @param array $themes_data  Themes data.
+         */
+        $csv_data = apply_filters( 'ptdm_csv_data', $csv_data, $plugins_data, $themes_data );
+
         // Generate filename
         $filename = 'plugins_themes_list_' . date( 'Y-m-d_H-i-s' ) . '.csv';
 
@@ -187,6 +197,14 @@ class PTDM_CSV_Export {
             );
         }
 
-        return $csv_data;
+        /**
+         * Filter CSV export data.
+         *
+         * @since 1.0.0
+         * @param array $csv_data     CSV rows.
+         * @param array $plugins_data Plugins data.
+         * @param array $themes_data  Themes data.
+         */
+        return apply_filters( 'ptdm_csv_data', $csv_data, $plugins_data, $themes_data );
     }
 } 
