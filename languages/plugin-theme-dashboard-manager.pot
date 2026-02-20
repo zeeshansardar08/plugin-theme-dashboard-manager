@@ -1,665 +1,153 @@
-# Copyright (C) 2024 ZeeCreatives
+# Copyright (C) 2026 ZeeCreatives
 # This file is distributed under the same license as the Plugin & Theme Dashboard Manager package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugin & Theme Dashboard Manager 1.0.0\n"
 "Report-Msgid-Bugs-To: https://zeecreatives.com\n"
-"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"POT-Creation-Date: 2026-02-20 00:00+0000\n"
+"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2024-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: includes/admin-page.php:42
+#: includes/admin-page.php:45
 msgid "Plugin & Theme Dashboard"
 msgstr ""
 
-#: includes/admin-page.php:43
-msgid "Plugin & Theme Dashboard"
-msgstr ""
-
-#: includes/admin-page.php:67
-msgid "Plugin & Theme Dashboard"
-msgstr ""
-
-#: includes/admin-page.php:70
+#: includes/admin-page.php:73
 msgid "View and manage all installed plugins and themes. Export the complete list to CSV for documentation purposes."
 msgstr ""
 
-#: includes/admin-page.php:78
+#: includes/admin-page.php:82
 msgid "Export to CSV"
 msgstr ""
 
-#: includes/admin-page.php:85
+#: includes/admin-page.php:88
 msgid "Plugins"
 msgstr ""
 
-#: includes/admin-page.php:89
+#: includes/admin-page.php:92
 msgid "Themes"
-msgstr ""
-
-#: includes/admin-page.php:105
-msgid "Plugin Name"
-msgstr ""
-
-#: includes/admin-page.php:106
-msgid "Version"
-msgstr ""
-
-#: includes/admin-page.php:107
-msgid "Status"
-msgstr ""
-
-#: includes/admin-page.php:108
-msgid "Author"
 msgstr ""
 
 #: includes/admin-page.php:109
-msgid "Description"
-msgstr ""
-
-#: includes/admin-page.php:113
-msgid "No plugins found."
-msgstr ""
-
-#: includes/admin-page.php:140
-msgid "Theme Name"
-msgstr ""
-
-#: includes/admin-page.php:141
-msgid "Version"
-msgstr ""
-
-#: includes/admin-page.php:142
-msgid "Status"
-msgstr ""
-
-#: includes/admin-page.php:143
-msgid "Author"
-msgstr ""
-
-#: includes/admin-page.php:144
-msgid "Description"
-msgstr ""
-
-#: includes/admin-page.php:148
-msgid "No themes found."
-msgstr ""
-
-#: includes/csv-export.php:30
-msgid "You do not have sufficient permissions to access this page."
-msgstr ""
-
-#: includes/csv-export.php:35
-msgid "Security check failed."
-msgstr ""
-
-#: includes/csv-export.php:47
-msgid "You do not have sufficient permissions to access this page."
-msgstr ""
-
-#: includes/csv-export.php:52
-msgid "Security check failed."
-msgstr ""
-
-#: includes/csv-export.php:70
-msgid "Type"
-msgstr ""
-
-#: includes/csv-export.php:71
-msgid "Name"
-msgstr ""
-
-#: includes/csv-export.php:72
-msgid "Version"
-msgstr ""
-
-#: includes/csv-export.php:73
-msgid "Status"
-msgstr ""
-
-#: includes/csv-export.php:74
-msgid "Author"
-msgstr ""
-
-#: includes/csv-export.php:75
-msgid "Description"
-msgstr ""
-
-#: includes/csv-export.php:81
-msgid "Plugin"
-msgstr ""
-
-#: includes/csv-export.php:91
-msgid "Theme"
-msgstr ""
-
-#: includes/csv-export.php:130
-msgid "Type"
-msgstr ""
-
-#: includes/csv-export.php:131
-msgid "Name"
-msgstr ""
-
-#: includes/csv-export.php:132
-msgid "Version"
-msgstr ""
-
-#: includes/csv-export.php:133
-msgid "Status"
-msgstr ""
-
-#: includes/csv-export.php:134
-msgid "Author"
-msgstr ""
-
-#: includes/csv-export.php:135
-msgid "Description"
-msgstr ""
-
-#: includes/csv-export.php:141
-msgid "Plugin"
-msgstr ""
-
-#: includes/csv-export.php:151
-msgid "Theme"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:67
-msgid "Plugin & Theme Dashboard"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:68
-msgid "Plugin & Theme Dashboard"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:69
-msgid "manage_options"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:70
-msgid "plugin-theme-dashboard"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:71
-msgid "admin_page_content"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:82
-msgid "ptdm-admin-styles"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:83
-msgid "assets/css/admin-styles.css"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:84
-msgid "array()"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:85
-msgid "PTDM_VERSION"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:88
-msgid "ptdm-admin-scripts"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:89
-msgid "assets/js/admin-scripts.js"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:90
-msgid "array( 'jquery' )"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:91
-msgid "PTDM_VERSION"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:92
-msgid "true"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:95
-msgid "ptdm-admin-scripts"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:96
-msgid "ptdm_ajax"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:97
-msgid "array(\n\t\t\t\t\t'ajax_url' => admin_url( 'admin-ajax.php' ),\n\t\t\t\t\t'nonce'    => wp_create_nonce( 'ptdm_export_nonce' ),\n\t\t\t\t\t'strings'  => array(\n\t\t\t\t\t\t'exporting' => __( 'Exporting...', 'plugin-theme-dashboard-manager' ),\n\t\t\t\t\t\t'error'     => __( 'An error occurred. Please try again.', 'plugin-theme-dashboard-manager' ),\n\t\t\t\t\t),\n\t\t\t\t)"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:100
-msgid "admin_url( 'admin-ajax.php' )"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:101
-msgid "wp_create_nonce( 'ptdm_export_nonce' )"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:102
-msgid "array(\n\t\t\t\t\t\t'exporting' => __( 'Exporting...', 'plugin-theme-dashboard-manager' ),\n\t\t\t\t\t\t'error'     => __( 'An error occurred. Please try again.', 'plugin-theme-dashboard-manager' ),\n\t\t\t\t\t)"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:103
-msgid "Exporting..."
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:104
-msgid "An error occurred. Please try again."
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:112
-msgid "manage_options"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:113
-msgid "You do not have sufficient permissions to access this page."
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:118
-msgid "tab"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:118
-msgid "sanitize_text_field"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:118
-msgid "wp_unslash"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:118
-msgid "plugins"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:123
-msgid "Plugin & Theme Dashboard"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:125
-msgid "View and manage all installed plugins and themes. Export the complete list to CSV for documentation purposes."
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:131
-msgid "admin_url( 'admin-post.php' )"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:132
-msgid "wp_nonce_field"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:132
-msgid "ptdm_export_csv"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:132
-msgid "ptdm_export_nonce"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:133
-msgid "action"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:133
-msgid "ptdm_export_csv"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:134
-msgid "button button-primary"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:135
-msgid "dashicons dashicons-download"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:136
-msgid "Export to CSV"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:141
-msgid "?page=plugin-theme-dashboard&tab=plugins"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:142
-msgid "nav-tab"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:142
-msgid "plugins"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:142
-msgid "nav-tab-active"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:143
-msgid "Plugins"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:144
-msgid "count( $this->get_plugins_data() )"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:146
-msgid "?page=plugin-theme-dashboard&tab=themes"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:147
-msgid "nav-tab"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:147
-msgid "themes"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:147
-msgid "nav-tab-active"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:148
-msgid "Themes"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:149
-msgid "count( $this->get_themes_data() )"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:153
-msgid "ptdm-content"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:154
-msgid "plugins"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:155
-msgid "display_plugins_table()"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:157
-msgid "display_themes_table()"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:167
 msgid "Plugin Name"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:168
+#: includes/admin-page.php:110
 msgid "Version"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:169
+#: includes/admin-page.php:111
 msgid "Status"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:170
+#: includes/admin-page.php:112
 msgid "Author"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:171
+#: includes/admin-page.php:113
 msgid "Description"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:175
+#: includes/admin-page.php:117
 msgid "No plugins found."
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:202
+#: includes/admin-page.php:141
 msgid "Theme Name"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:203
+#: includes/admin-page.php:142
 msgid "Version"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:204
+#: includes/admin-page.php:143
 msgid "Status"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:205
+#: includes/admin-page.php:144
 msgid "Author"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:206
+#: includes/admin-page.php:145
 msgid "Description"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:210
+#: includes/admin-page.php:149
 msgid "No themes found."
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:220
-msgid "get_plugins"
+#: includes/admin-page.php:103
+msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:221
-msgid "ABSPATH . 'wp-admin/includes/plugin.php'"
+#: includes/admin-page.php:79
+msgid "Exporting..."
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:224
-msgid "get_plugins()"
+#: includes/admin-page.php:80
+msgid "An error occurred. Please try again."
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:225
-msgid "get_option( 'active_plugins' )"
+#: includes/admin-page.php:81
+msgid "Search plugins and themes..."
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:226
-msgid "array()"
+#: includes/admin-page.php:82
+msgid "This item is currently active and running."
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:229
-msgid "plugins"
+#: includes/admin-page.php:83
+msgid "This item is installed but not currently active."
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:229
-msgid "plugin_file"
+#: includes/csv-export.php:33
+msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:229
-msgid "plugin_data"
+#: includes/csv-export.php:38
+msgid "Security check failed."
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:230
-msgid "array(\n\t\t\t\t'name'        => $plugin_data['Name'],\n\t\t\t\t'version'     => $plugin_data['Version'],\n\t\t\t\t'status'      => in_array( $plugin_file, $active_plugins, true ) ? 'active' : 'inactive',\n\t\t\t\t'author'      => $plugin_data['Author'],\n\t\t\t\t'description' => $plugin_data['Description'],\n\t\t\t)"
+#: includes/csv-export.php:51
+msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:231
+#: includes/csv-export.php:56
+msgid "Security check failed."
+msgstr ""
+
+#: includes/csv-export.php:73
+msgid "Type"
+msgstr ""
+
+#: includes/csv-export.php:74
 msgid "Name"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:232
+#: includes/csv-export.php:75
 msgid "Version"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:233
-msgid "in_array( $plugin_file, $active_plugins, true ) ? 'active' : 'inactive'"
+#: includes/csv-export.php:76
+msgid "Status"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:234
+#: includes/csv-export.php:77
 msgid "Author"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:235
+#: includes/csv-export.php:78
 msgid "Description"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:240
-msgid "usort"
+#: includes/csv-export.php:84
+msgid "Plugin"
 msgstr ""
 
-#: plugin-theme-dashboard-manager.php:240
-msgid "plugins_data"
+#: includes/csv-export.php:94
+msgid "Theme"
 msgstr ""
-
-#: plugin-theme-dashboard-manager.php:240
-msgid "function( $a, $b ) {\n\t\t\treturn strcasecmp( $a['name'], $b['name'] );\n\t\t}"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:241
-msgid "strcasecmp( $a['name'], $b['name'] )"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:241
-msgid "name"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:241
-msgid "name"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:245
-msgid "plugins_data"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:252
-msgid "wp_get_themes()"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:253
-msgid "get_stylesheet()"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:254
-msgid "array()"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:257
-msgid "themes"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:257
-msgid "theme_slug"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:257
-msgid "theme"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:258
-msgid "array(\n\t\t\t\t'name'        => $theme->get( 'Name' ),\n\t\t\t\t'version'     => $theme->get( 'Version' ),\n\t\t\t\t'status'      => $theme_slug === $current_theme ? 'active' : 'inactive',\n\t\t\t\t'author'      => $theme->get( 'Author' ),\n\t\t\t\t'description' => $theme->get( 'Description' ),\n\t\t\t)"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:259
-msgid "get( 'Name' )"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:260
-msgid "get( 'Version' )"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:261
-msgid "$theme_slug === $current_theme ? 'active' : 'inactive'"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:262
-msgid "get( 'Author' )"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:263
-msgid "get( 'Description' )"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:268
-msgid "usort"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:268
-msgid "themes_data"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:268
-msgid "function( $a, $b ) {\n\t\t\treturn strcasecmp( $a['name'], $b['name'] );\n\t\t}"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:269
-msgid "strcasecmp( $a['name'], $b['name'] )"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:269
-msgid "name"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:269
-msgid "name"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:273
-msgid "themes_data"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:280
-msgid "activate_plugins"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:285
-msgid "ptdm_activated"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:285
-msgid "time()"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:287
-msgid "flush_rewrite_rules()"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:295
-msgid "activate_plugins"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:300
-msgid "flush_rewrite_rules()"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:308
-msgid "plugin-theme-dashboard-manager"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:309
-msgid "false"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:310
-msgid "dirname( PTDM_PLUGIN_BASENAME ) . '/languages'"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:310
-msgid "PTDM_PLUGIN_BASENAME"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:310
-msgid "languages"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:315
-msgid "__FILE__"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:315
-msgid "Plugin_Theme_Dashboard_Manager"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:315
-msgid "activate"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:316
-msgid "__FILE__"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:316
-msgid "Plugin_Theme_Dashboard_Manager"
-msgstr ""
-
-#: plugin-theme-dashboard-manager.php:316
-msgid "deactivate"
-msgstr "" 
