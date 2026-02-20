@@ -1,87 +1,44 @@
 # Copyright (C) 2026 ZeeCreatives
-# This file is distributed under the same license as the Plugin & Theme Dashboard Manager package.
+# This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugin & Theme Dashboard Manager 1.0.0\n"
-"Report-Msgid-Bugs-To: https://zeecreatives.com\n"
-"POT-Creation-Date: 2026-02-20 00:00+0000\n"
-"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plugin-theme-dashboard-manager\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-21T00:12:10+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: plugin-theme-dashboard-manager\n"
 
-#: includes/admin-page.php:45
+#. Plugin Name of the plugin
+#: plugin-theme-dashboard-manager.php
+msgid "Plugin & Theme Dashboard Manager"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: plugin-theme-dashboard-manager.php
+msgid "https://zeecreatives.com"
+msgstr ""
+
+#. Description of the plugin
+#: plugin-theme-dashboard-manager.php
+msgid "A comprehensive dashboard to view and export all installed plugins and themes with their status information."
+msgstr ""
+
+#. Author of the plugin
+#: plugin-theme-dashboard-manager.php
+msgid "ZeeCreatives"
+msgstr ""
+
+#: includes/admin-page.php:38
+#: includes/admin-page.php:39
+#: includes/admin-page.php:105
 msgid "Plugin & Theme Dashboard"
-msgstr ""
-
-#: includes/admin-page.php:73
-msgid "View and manage all installed plugins and themes. Export the complete list to CSV for documentation purposes."
-msgstr ""
-
-#: includes/admin-page.php:82
-msgid "Export to CSV"
-msgstr ""
-
-#: includes/admin-page.php:88
-msgid "Plugins"
-msgstr ""
-
-#: includes/admin-page.php:92
-msgid "Themes"
-msgstr ""
-
-#: includes/admin-page.php:109
-msgid "Plugin Name"
-msgstr ""
-
-#: includes/admin-page.php:110
-msgid "Version"
-msgstr ""
-
-#: includes/admin-page.php:111
-msgid "Status"
-msgstr ""
-
-#: includes/admin-page.php:112
-msgid "Author"
-msgstr ""
-
-#: includes/admin-page.php:113
-msgid "Description"
-msgstr ""
-
-#: includes/admin-page.php:117
-msgid "No plugins found."
-msgstr ""
-
-#: includes/admin-page.php:141
-msgid "Theme Name"
-msgstr ""
-
-#: includes/admin-page.php:142
-msgid "Version"
-msgstr ""
-
-#: includes/admin-page.php:143
-msgid "Status"
-msgstr ""
-
-#: includes/admin-page.php:144
-msgid "Author"
-msgstr ""
-
-#: includes/admin-page.php:145
-msgid "Description"
-msgstr ""
-
-#: includes/admin-page.php:149
-msgid "No themes found."
-msgstr ""
-
-#: includes/admin-page.php:103
-msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
 #: includes/admin-page.php:79
@@ -104,50 +61,93 @@ msgstr ""
 msgid "This item is installed but not currently active."
 msgstr ""
 
-#: includes/csv-export.php:33
+#: includes/admin-page.php:97
+#: includes/csv-export.php:39
+#: includes/csv-export.php:58
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: includes/csv-export.php:38
-msgid "Security check failed."
+#: includes/admin-page.php:108
+msgid "View and manage all installed plugins and themes. Export the complete list to CSV for documentation purposes."
 msgstr ""
 
-#: includes/csv-export.php:51
-msgid "You do not have sufficient permissions to access this page."
+#: includes/admin-page.php:117
+msgid "Export to CSV"
 msgstr ""
 
-#: includes/csv-export.php:56
-msgid "Security check failed."
+#: includes/admin-page.php:125
+msgid "Plugins"
 msgstr ""
 
-#: includes/csv-export.php:73
-msgid "Type"
+#: includes/admin-page.php:130
+msgid "Themes"
 msgstr ""
 
-#: includes/csv-export.php:74
-msgid "Name"
+#: includes/admin-page.php:158
+msgid "Plugin Name"
 msgstr ""
 
-#: includes/csv-export.php:75
+#: includes/admin-page.php:159
+#: includes/admin-page.php:206
+#: includes/csv-export.php:87
+#: includes/csv-export.php:170
 msgid "Version"
 msgstr ""
 
-#: includes/csv-export.php:76
+#: includes/admin-page.php:160
+#: includes/admin-page.php:207
+#: includes/csv-export.php:88
+#: includes/csv-export.php:171
 msgid "Status"
 msgstr ""
 
-#: includes/csv-export.php:77
+#: includes/admin-page.php:161
+#: includes/admin-page.php:208
+#: includes/csv-export.php:89
+#: includes/csv-export.php:172
 msgid "Author"
 msgstr ""
 
-#: includes/csv-export.php:78
+#: includes/admin-page.php:162
+#: includes/admin-page.php:209
+#: includes/csv-export.php:90
+#: includes/csv-export.php:173
 msgid "Description"
 msgstr ""
 
-#: includes/csv-export.php:84
+#: includes/admin-page.php:168
+msgid "No plugins found."
+msgstr ""
+
+#: includes/admin-page.php:205
+msgid "Theme Name"
+msgstr ""
+
+#: includes/admin-page.php:215
+msgid "No themes found."
+msgstr ""
+
+#: includes/csv-export.php:44
+#: includes/csv-export.php:63
+msgid "Security check failed."
+msgstr ""
+
+#: includes/csv-export.php:85
+#: includes/csv-export.php:168
+msgid "Type"
+msgstr ""
+
+#: includes/csv-export.php:86
+#: includes/csv-export.php:169
+msgid "Name"
+msgstr ""
+
+#: includes/csv-export.php:96
+#: includes/csv-export.php:179
 msgid "Plugin"
 msgstr ""
 
-#: includes/csv-export.php:94
+#: includes/csv-export.php:108
+#: includes/csv-export.php:191
 msgid "Theme"
 msgstr ""

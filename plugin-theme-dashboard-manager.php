@@ -11,7 +11,7 @@
  * Text Domain: plugin-theme-dashboard-manager
  * Domain Path: /languages
  * Requires at least: 6.0
- * Tested up to: 6.4
+ * Tested up to: 6.9
  * Requires PHP: 7.4
  * Network: false
  *
