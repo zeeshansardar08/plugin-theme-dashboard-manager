@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Plugin & Theme Dashboard Manager
- * Plugin URI: https://zeecreatives.com
+ * Plugin URI: https://zignites.com
  * Description: A comprehensive dashboard to view and export all installed plugins and themes with their status information.
  * Version: 1.0.0
- * Author: ZeeCreatives
- * Author URI: https://zeecreatives.com
+ * Author: Zignites
+ * Author URI: https://zignites.com
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: plugin-theme-dashboard-manager

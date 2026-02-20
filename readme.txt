@@ -1,5 +1,5 @@
 === Plugin & Theme Dashboard Manager ===
-Contributors: zeecreatives
+Contributors: zignites
 Tags: plugins, themes, dashboard, export, csv, admin
 Requires at least: 6.0
 Tested up to: 6.9

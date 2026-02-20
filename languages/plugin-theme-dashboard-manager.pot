@@ -1,4 +1,4 @@
-# Copyright (C) 2026 ZeeCreatives
+# Copyright (C) 2026 Zignites
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-21T00:12:10+01:00\n"
+"POT-Creation-Date: 2026-02-21T00:19:55+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: plugin-theme-dashboard-manager\n"
@@ -22,7 +22,7 @@ msgstr ""
 #. Plugin URI of the plugin
 #. Author URI of the plugin
 #: plugin-theme-dashboard-manager.php
-msgid "https://zeecreatives.com"
+msgid "https://zignites.com"
 msgstr ""
 
 #. Description of the plugin
@@ -32,7 +32,7 @@ msgstr ""
 
 #. Author of the plugin
 #: plugin-theme-dashboard-manager.php
-msgid "ZeeCreatives"
+msgid "Zignites"
 msgstr ""
 
 #: includes/admin-page.php:38
