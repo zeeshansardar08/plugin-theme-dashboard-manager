@@ -35,10 +35,10 @@ class PTDM_Admin_Page {
      */
     public function add_admin_menu() {
         add_management_page(
-            __( 'Plugin & Theme Dashboard', 'plugin-theme-dashboard-manager' ),
-            __( 'Plugin & Theme Dashboard', 'plugin-theme-dashboard-manager' ),
+            esc_html__( 'Site Extensions Snapshot', 'site-extensions-snapshot' ),
+            esc_html__( 'Site Extensions Snapshot', 'site-extensions-snapshot' ),
             'manage_options',
-            'plugin-theme-dashboard',
+            'site-extensions-snapshot',
             array( $this, 'admin_page_content' )
         );
     }
@@ -50,7 +50,7 @@ class PTDM_Admin_Page {
      * @param string $hook_suffix The current admin page.
      */
     public function enqueue_admin_scripts( $hook_suffix ) {
-        if ( 'tools_page_plugin-theme-dashboard' !== $hook_suffix ) {
+        if ( 'tools_page_site-extensions-snapshot' !== $hook_suffix ) {
             return;
         }
 
@@ -76,11 +76,11 @@ class PTDM_Admin_Page {
                 'ajax_url' => admin_url( 'admin-ajax.php' ),
                 'nonce'    => wp_create_nonce( 'ptdm_export_nonce' ),
                 'strings'  => array(
-                    'exporting' => __( 'Exporting...', 'plugin-theme-dashboard-manager' ),
-                    'error'     => __( 'An error occurred. Please try again.', 'plugin-theme-dashboard-manager' ),
-                    'search_placeholder' => __( 'Search plugins and themes...', 'plugin-theme-dashboard-manager' ),
-                    'tooltip_active'     => __( 'This item is currently active and running.', 'plugin-theme-dashboard-manager' ),
-                    'tooltip_inactive'   => __( 'This item is installed but not currently active.', 'plugin-theme-dashboard-manager' ),
+                    'exporting' => __( 'Exporting...', 'site-extensions-snapshot' ),
+                    'error'     => __( 'An error occurred. Please try again.', 'site-extensions-snapshot' ),
+                    'search_placeholder' => __( 'Search plugins and themes...', 'site-extensions-snapshot' ),
+                    'tooltip_active'     => __( 'This item is currently active and running.', 'site-extensions-snapshot' ),
+                    'tooltip_inactive'   => __( 'This item is installed but not currently active.', 'site-extensions-snapshot' ),
                 ),
             )
         );
@@ -94,18 +94,43 @@ class PTDM_Admin_Page {
     public function admin_page_content() {
         // Check user capabilities
         if ( ! current_user_can( 'manage_options' ) ) {
-            wp_die( __( 'You do not have sufficient permissions to access this page.', 'plugin-theme-dashboard-manager' ) );
+            wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'site-extensions-snapshot' ) );
         }
 
-        // Get current tab
-        $current_tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'plugins';
+        // Get current tab with nonce verification.
+        $allowed_tabs = array( 'plugins', 'themes' );
+        $current_tab = 'plugins';
+        $requested_tab = isset( $_GET['tab'] ) ? sanitize_key( wp_unslash( $_GET['tab'] ) ) : '';
+        $tab_nonce = isset( $_GET['_wpnonce'] ) ? sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) ) : '';
+
+        if ( $requested_tab && in_array( $requested_tab, $allowed_tabs, true ) && wp_verify_nonce( $tab_nonce, 'ptdm_admin_tab' ) ) {
+            $current_tab = $requested_tab;
+        }
+
+        $tab_nonce = wp_create_nonce( 'ptdm_admin_tab' );
+        $plugins_tab_url = add_query_arg(
+            array(
+                'page'     => 'site-extensions-snapshot',
+                'tab'      => 'plugins',
+                '_wpnonce' => $tab_nonce,
+            ),
+            admin_url( 'tools.php' )
+        );
+        $themes_tab_url = add_query_arg(
+            array(
+                'page'     => 'site-extensions-snapshot',
+                'tab'      => 'themes',
+                '_wpnonce' => $tab_nonce,
+            ),
+            admin_url( 'tools.php' )
+        );
 
         ?>
         <div class="wrap">
-            <h1><?php esc_html_e( 'Plugin & Theme Dashboard', 'plugin-theme-dashboard-manager' ); ?></h1>
+            <h1><?php esc_html_e( 'Site Extensions Snapshot', 'site-extensions-snapshot' ); ?></h1>
             
             <p class="description">
-                <?php esc_html_e( 'View and manage all installed plugins and themes. Export the complete list to CSV for documentation purposes.', 'plugin-theme-dashboard-manager' ); ?>
+                <?php esc_html_e( 'View and manage all installed plugins and themes. Export the complete list to CSV for documentation purposes.', 'site-extensions-snapshot' ); ?>
             </p>
 
             <div class="ptdm-export-section">
@@ -114,21 +139,21 @@ class PTDM_Admin_Page {
                     <input type="hidden" name="action" value="ptdm_export_csv">
                     <button type="submit" class="button button-primary">
                         <span class="dashicons dashicons-download"></span>
-                        <?php esc_html_e( 'Export to CSV', 'plugin-theme-dashboard-manager' ); ?>
+                        <?php esc_html_e( 'Export to CSV', 'site-extensions-snapshot' ); ?>
                     </button>
                 </form>
             </div>
 
             <nav class="nav-tab-wrapper">
-                <a href="<?php echo esc_url( admin_url( 'tools.php?page=plugin-theme-dashboard&tab=plugins' ) ); ?>" 
-                   class="nav-tab <?php echo 'plugins' === $current_tab ? 'nav-tab-active' : ''; ?>">
-                    <?php esc_html_e( 'Plugins', 'plugin-theme-dashboard-manager' ); ?>
-                    <span class="ptdm-count">(<?php echo esc_html( count( $this->get_plugins_data() ) ); ?>)</span>
+                <a href="<?php echo esc_url( $plugins_tab_url ); ?>" 
+                   class="nav-tab <?php echo esc_attr( 'plugins' === $current_tab ? 'nav-tab-active' : '' ); ?>">
+                    <?php esc_html_e( 'Plugins', 'site-extensions-snapshot' ); ?>
+                    <span class="ptdm-count"><?php echo esc_html( count( $this->get_plugins_data() ) ); ?></span>
                 </a>
-                <a href="<?php echo esc_url( admin_url( 'tools.php?page=plugin-theme-dashboard&tab=themes' ) ); ?>" 
-                   class="nav-tab <?php echo 'themes' === $current_tab ? 'nav-tab-active' : ''; ?>">
-                    <?php esc_html_e( 'Themes', 'plugin-theme-dashboard-manager' ); ?>
-                    <span class="ptdm-count">(<?php echo esc_html( count( $this->get_themes_data() ) ); ?>)</span>
+                <a href="<?php echo esc_url( $themes_tab_url ); ?>" 
+                   class="nav-tab <?php echo esc_attr( 'themes' === $current_tab ? 'nav-tab-active' : '' ); ?>">
+                    <?php esc_html_e( 'Themes', 'site-extensions-snapshot' ); ?>
+                    <span class="ptdm-count"><?php echo esc_html( count( $this->get_themes_data() ) ); ?></span>
                 </a>
             </nav>
 
@@ -155,17 +180,17 @@ class PTDM_Admin_Page {
             <table class="wp-list-table widefat fixed striped">
                 <thead>
                     <tr>
-                        <th scope="col"><?php esc_html_e( 'Plugin Name', 'plugin-theme-dashboard-manager' ); ?></th>
-                        <th scope="col"><?php esc_html_e( 'Version', 'plugin-theme-dashboard-manager' ); ?></th>
-                        <th scope="col"><?php esc_html_e( 'Status', 'plugin-theme-dashboard-manager' ); ?></th>
-                        <th scope="col"><?php esc_html_e( 'Author', 'plugin-theme-dashboard-manager' ); ?></th>
-                        <th scope="col"><?php esc_html_e( 'Description', 'plugin-theme-dashboard-manager' ); ?></th>
+                        <th scope="col"><?php esc_html_e( 'Plugin Name', 'site-extensions-snapshot' ); ?></th>
+                        <th scope="col"><?php esc_html_e( 'Version', 'site-extensions-snapshot' ); ?></th>
+                        <th scope="col"><?php esc_html_e( 'Status', 'site-extensions-snapshot' ); ?></th>
+                        <th scope="col"><?php esc_html_e( 'Author', 'site-extensions-snapshot' ); ?></th>
+                        <th scope="col"><?php esc_html_e( 'Description', 'site-extensions-snapshot' ); ?></th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php if ( empty( $plugins ) ) : ?>
                         <tr>
-                            <td colspan="5"><?php esc_html_e( 'No plugins found.', 'plugin-theme-dashboard-manager' ); ?></td>
+                            <td colspan="5"><?php esc_html_e( 'No plugins found.', 'site-extensions-snapshot' ); ?></td>
                         </tr>
                     <?php else : ?>
                         <?php foreach ( $plugins as $plugin ) : ?>
@@ -202,17 +227,17 @@ class PTDM_Admin_Page {
             <table class="wp-list-table widefat fixed striped">
                 <thead>
                     <tr>
-                        <th scope="col"><?php esc_html_e( 'Theme Name', 'plugin-theme-dashboard-manager' ); ?></th>
-                        <th scope="col"><?php esc_html_e( 'Version', 'plugin-theme-dashboard-manager' ); ?></th>
-                        <th scope="col"><?php esc_html_e( 'Status', 'plugin-theme-dashboard-manager' ); ?></th>
-                        <th scope="col"><?php esc_html_e( 'Author', 'plugin-theme-dashboard-manager' ); ?></th>
-                        <th scope="col"><?php esc_html_e( 'Description', 'plugin-theme-dashboard-manager' ); ?></th>
+                        <th scope="col"><?php esc_html_e( 'Theme Name', 'site-extensions-snapshot' ); ?></th>
+                        <th scope="col"><?php esc_html_e( 'Version', 'site-extensions-snapshot' ); ?></th>
+                        <th scope="col"><?php esc_html_e( 'Status', 'site-extensions-snapshot' ); ?></th>
+                        <th scope="col"><?php esc_html_e( 'Author', 'site-extensions-snapshot' ); ?></th>
+                        <th scope="col"><?php esc_html_e( 'Description', 'site-extensions-snapshot' ); ?></th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php if ( empty( $themes ) ) : ?>
                         <tr>
-                            <td colspan="5"><?php esc_html_e( 'No themes found.', 'plugin-theme-dashboard-manager' ); ?></td>
+                            <td colspan="5"><?php esc_html_e( 'No themes found.', 'site-extensions-snapshot' ); ?></td>
                         </tr>
                     <?php else : ?>
                         <?php foreach ( $themes as $theme ) : ?>
@@ -311,3 +336,9 @@ class PTDM_Admin_Page {
         return apply_filters( 'ptdm_themes_data', $themes_data );
     }
 }
+
+
+
+
+
+

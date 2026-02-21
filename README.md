@@ -1,10 +1,10 @@
-# Plugin & Theme Dashboard Manager
+ï»¿# Site Extensions Snapshot
 
 A WordPress plugin that adds a dashboard to view installed plugins and themes with status details and CSV export.
 
 ## Description
 
-Plugin & Theme Dashboard Manager adds a Tools page in the WordPress admin where administrators can:
+Site Extensions Snapshot adds a Tools page in the WordPress admin where administrators can:
 
 - View all installed plugins with status, version, author, and description
 - View all installed themes with status, version, author, and description
@@ -33,9 +33,9 @@ Benefits:
 
 ## Installation
 
-1. Upload the `plugin-theme-dashboard-manager` folder to `/wp-content/plugins/`.
+1. Upload the `site-extensions-snapshot` folder to `/wp-content/plugins/`.
 2. Activate the plugin.
-3. Go to Tools -> Plugin & Theme Dashboard.
+3. Go to Tools -> Site Extensions Snapshot.
 
 ## Usage
 
@@ -58,24 +58,24 @@ add_filter( 'ptdm_csv_data', 'my_custom_csv_filter', 10, 3 );
 
 ## Internationalization
 
-- Text domain: `plugin-theme-dashboard-manager`
-- POT file: `languages/plugin-theme-dashboard-manager.pot`
+- Text domain: `site-extensions-snapshot`
+- POT file: `languages/site-extensions-snapshot.pot`
 
 ## File Structure
 
 ```
-plugin-theme-dashboard-manager/
-+-- plugin-theme-dashboard-manager.php
+site-extensions-snapshot/
++-- site-extensions-snapshot.php
 +-- includes/
-¦   +-- admin-page.php
-¦   +-- csv-export.php
+Â¦   +-- admin-page.php
+Â¦   +-- csv-export.php
 +-- assets/
-¦   +-- css/
-¦   ¦   +-- admin-styles.css
-¦   +-- js/
-¦       +-- admin-scripts.js
+Â¦   +-- css/
+Â¦   Â¦   +-- admin-styles.css
+Â¦   +-- js/
+Â¦       +-- admin-scripts.js
 +-- languages/
-¦   +-- plugin-theme-dashboard-manager.pot
+Â¦   +-- site-extensions-snapshot.pot
 +-- uninstall.php
 +-- README.md
 ```
@@ -83,3 +83,9 @@ plugin-theme-dashboard-manager/
 ## License
 
 GPL v2 or later. See `LICENSE.txt`.
+
+
+
+
+
+

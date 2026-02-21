@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Plugin & Theme Dashboard Manager
+ * Plugin Name: Site Extensions Snapshot
  * Plugin URI: https://zignites.com
  * Description: A comprehensive dashboard to view and export all installed plugins and themes with their status information.
  * Version: 1.0.0
@@ -8,12 +8,11 @@
  * Author URI: https://zignites.com
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: plugin-theme-dashboard-manager
+ * Text Domain: site-extensions-snapshot
  * Domain Path: /languages
  * Requires at least: 6.0
  * Tested up to: 6.9
  * Requires PHP: 7.4
- * Network: false
  *
  * @package PluginThemeDashboardManager
  * @since 1.0.0
@@ -44,7 +43,6 @@ class Plugin_Theme_Dashboard_Manager {
      */
     public function __construct() {
         add_action( 'init', array( $this, 'init' ) );
-        add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
     }
 
     /**
@@ -82,18 +80,6 @@ class Plugin_Theme_Dashboard_Manager {
         new PTDM_CSV_Export();
     }
 
-    /**
-     * Load plugin textdomain
-     *
-     * @since 1.0.0
-     */
-    public function load_textdomain() {
-        load_plugin_textdomain(
-            'plugin-theme-dashboard-manager',
-            false,
-            dirname( PTDM_PLUGIN_BASENAME ) . '/languages'
-        );
-    }
 
     /**
      * Plugin activation hook
@@ -130,8 +116,14 @@ class Plugin_Theme_Dashboard_Manager {
 }
 
 // Initialize the plugin
-$plugin_theme_dashboard_manager = new Plugin_Theme_Dashboard_Manager();
+$ptdm_plugin = new Plugin_Theme_Dashboard_Manager();
 
 // Register activation and deactivation hooks
 register_activation_hook( __FILE__, array( 'Plugin_Theme_Dashboard_Manager', 'activate' ) );
 register_deactivation_hook( __FILE__, array( 'Plugin_Theme_Dashboard_Manager', 'deactivate' ) ); 
+
+
+
+
+
+

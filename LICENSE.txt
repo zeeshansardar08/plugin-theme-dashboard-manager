@@ -1,4 +1,4 @@
-GNU GENERAL PUBLIC LICENSE
+﻿GNU GENERAL PUBLIC LICENSE
 Version 2, June 1991
 
 Copyright (C) 1989, 1991 Free Software Foundation, Inc.
@@ -299,3 +299,9 @@ the exclusion of warranty; and each file should have at least the
     You should have received a copy of the GNU General Public License
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+
+
+
+
+
