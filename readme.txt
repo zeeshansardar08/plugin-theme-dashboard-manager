@@ -1,6 +1,6 @@
-=== Plugin & Theme Dashboard Manager ===
-Contributors: zignites
-Tags: plugins, themes, dashboard, export, csv, admin
+﻿=== Site Extensions Snapshot ===
+Contributors: Zignites
+Tags: plugins, themes, dashboard, export, csv
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 7.4
@@ -12,7 +12,7 @@ A dashboard to view installed plugins and themes with status, plus CSV export.
 
 == Description ==
 
-Plugin & Theme Dashboard Manager adds a Tools page that lists all installed plugins and themes with their status (active/inactive), versions, authors, and descriptions. It also provides a one-click CSV export for documentation or audits.
+Site Extensions Snapshot adds a Tools page that lists all installed plugins and themes with their status (active/inactive), versions, authors, and descriptions. It also provides a one-click CSV export for documentation or audits.
 
 Key features:
 
@@ -36,9 +36,9 @@ Security and access:
 
 == Installation ==
 
-1. Upload the `plugin-theme-dashboard-manager` folder to `/wp-content/plugins/`.
+1. Upload the `site-extensions-snapshot` folder to `/wp-content/plugins/`.
 2. Activate the plugin through the Plugins menu.
-3. Go to Tools -> Plugin & Theme Dashboard.
+3. Go to Tools -> Site Extensions Snapshot.
 
 == Frequently Asked Questions ==
 
@@ -65,3 +65,9 @@ Only a single activation timestamp option is stored (`ptdm_activated`). No exter
 
 = 1.0.0 =
 * Initial release.
+
+
+
+
+
+

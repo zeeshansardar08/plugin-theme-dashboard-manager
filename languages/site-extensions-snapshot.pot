@@ -1,9 +1,9 @@
-# Copyright (C) 2026 Zignites
+﻿# Copyright (C) 2026 Zignites
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Plugin & Theme Dashboard Manager 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plugin-theme-dashboard-manager\n"
+"Project-Id-Version: Site Extensions Snapshot 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/site-extensions-snapshot\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,33 +12,33 @@ msgstr ""
 "POT-Creation-Date: 2026-02-21T00:19:55+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: plugin-theme-dashboard-manager\n"
+"X-Domain: site-extensions-snapshot\n"
 
 #. Plugin Name of the plugin
-#: plugin-theme-dashboard-manager.php
-msgid "Plugin & Theme Dashboard Manager"
+#: site-extensions-snapshot.php
+msgid "Site Extensions Snapshot"
 msgstr ""
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
-#: plugin-theme-dashboard-manager.php
+#: site-extensions-snapshot.php
 msgid "https://zignites.com"
 msgstr ""
 
 #. Description of the plugin
-#: plugin-theme-dashboard-manager.php
+#: site-extensions-snapshot.php
 msgid "A comprehensive dashboard to view and export all installed plugins and themes with their status information."
 msgstr ""
 
 #. Author of the plugin
-#: plugin-theme-dashboard-manager.php
+#: site-extensions-snapshot.php
 msgid "Zignites"
 msgstr ""
 
 #: includes/admin-page.php:38
 #: includes/admin-page.php:39
 #: includes/admin-page.php:105
-msgid "Plugin & Theme Dashboard"
+msgid "Site Extensions Snapshot"
 msgstr ""
 
 #: includes/admin-page.php:79
@@ -151,3 +151,9 @@ msgstr ""
 #: includes/csv-export.php:191
 msgid "Theme"
 msgstr ""
+
+
+
+
+
+

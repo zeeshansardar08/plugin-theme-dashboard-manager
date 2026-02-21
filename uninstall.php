@@ -1,6 +1,6 @@
 <?php
 /**
- * Uninstall Plugin & Theme Dashboard Manager
+ * Uninstall Site Extensions Snapshot
  *
  * @package PluginThemeDashboardManager
  * @since 1.0.0
@@ -21,3 +21,9 @@ delete_option( 'ptdm_activated' );
 
 // Clear any cached data that has been removed
 wp_cache_flush(); 
+
+
+
+
+
+

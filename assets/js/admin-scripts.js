@@ -1,5 +1,5 @@
-/**
- * Plugin & Theme Dashboard Manager - Admin Scripts
+﻿/**
+ * Site Extensions Snapshot - Admin Scripts
  *
  * @package PluginThemeDashboardManager
  * @since 1.0.0
@@ -303,3 +303,9 @@
     });
 
 })(jQuery); 
+
+
+
+
+
+
