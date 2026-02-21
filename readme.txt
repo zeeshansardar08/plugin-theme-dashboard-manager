@@ -1,5 +1,5 @@
 ﻿=== Site Extensions Snapshot ===
-Contributors: Zignites
+Contributors: zeeshansardar08
 Tags: plugins, themes, dashboard, export, csv
 Requires at least: 6.0
 Tested up to: 6.9
