@@ -1,7 +1,6 @@
 <?php
 /**
  * Plugin Name: Site Extensions Snapshot
- * Plugin URI: https://zignites.com
  * Description: A comprehensive dashboard to view and export all installed plugins and themes with their status information.
  * Version: 1.0.0
  * Author: Zignites
