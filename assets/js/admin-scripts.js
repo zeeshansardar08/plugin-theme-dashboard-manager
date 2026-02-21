@@ -189,8 +189,12 @@
          * Search functionality
          */
         initSearch: function() {
-            var $searchInput = $('<input type="text" class="ptdm-search" placeholder="' + ptdm_ajax.strings.search_placeholder + '" />');
-            $('.ptdm-export-section').after($searchInput);
+            var $searchInput = $('.ptdm-export-section .ptdm-search');
+            if (!$searchInput.length) {
+                return;
+            }
+
+            $searchInput.attr('placeholder', ptdm_ajax.strings.search_placeholder);
             
             var debouncedSearch = this.debounce(function() {
                 var searchTerm = $searchInput.val().toLowerCase();

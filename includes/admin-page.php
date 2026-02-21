@@ -142,6 +142,11 @@ class PTDM_Admin_Page {
                         <?php esc_html_e( 'Export to CSV', 'site-extensions-snapshot' ); ?>
                     </button>
                 </form>
+
+                <div class="ptdm-search-wrap">
+                    <span class="dashicons dashicons-search" aria-hidden="true"></span>
+                    <input type="search" class="ptdm-search" placeholder="<?php echo esc_attr__( 'Search plugins and themes...', 'site-extensions-snapshot' ); ?>" />
+                </div>
             </div>
 
             <nav class="nav-tab-wrapper">
